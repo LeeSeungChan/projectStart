@@ -26,6 +26,19 @@ repositories {
 }
 
 dependencies {
-    testImplementation('org.springframework.boot:spring-boot-starter-web')
-    testRuntimeOnly('org.springframework.boot:spring-boot-starter-test')
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+
+    // lombok 사용하기
+    implementation('org.projectlombok:lombok:1.18.2')
+    testImplementation('org.projectlombok:lombok:1.18.2')
+    annotationProcessor('org.projectlombok:lombok')
+    testAnnotationProcessor('org.projectlombok:lombok')
+
+    // Spring Data Jpa 적용하기
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
+
+    //
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
 }
